@@ -28,7 +28,7 @@ def gen_auto_response(ques):
     openai.api_key=st.secrets["api"]
     
     response = openai.Completion.create(
-        model="code-cushman-001",
+        model="gpt-3.5-turbo",
         prompt=f""""Given a Python solution for the leetcode question below
                     {platform} Question: {ques}
                     {language} Solution: """,
